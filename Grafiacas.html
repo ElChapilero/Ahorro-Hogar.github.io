@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Gráficas / Comparativas</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Primera Barra de Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Ahorro de Energía</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">Perfil de Hogar</a>
+                <a href="Recomendaciones.html" class="nav-item">Recomendaciones / Notificaciones</a>
+                <a href="historial.html" class="nav-item">Historial de Consumo</a>
+                <a href="Grafiacas.html" class="nav-item">Gráficas / Comparativas</a>
+                
+                <!-- Enlace de Perfil con menú desplegable -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="perfil" onclick="toggleProfileMenu(event)">Perfil</a>
+                    <div id="profileMenu" class="dropdown-menu">
+                        <div class="dropdown-title">Nombre Usuario</div>
+                        <a href="sign_in.html">Iniciar Sesión</a>
+                        <a href="register.html">Registrarse</a>
+                        <a href="#">Cerrar Sesión</a>
+                    </div>
+                </div>
+                <script src="menu-perfil.js"></script>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Segunda Barra con el Título de la Ventana -->
+    <div class="title-bar">
+        <h1>Gráficas / Comparativas</h1>
+    </div>
+
+    <!-- Contenedor Principal en Dos Columnas -->
+    <div class="main-content grid">
+        <!-- Columna de Comparación de Consumo -->
+        <div class="comparison-section">
+            <h2>Comparar Consumo</h2>
+
+            <form id="comparison-form">
+                <h3>Consumo real (kWh) del recibo de luz</h3>
+                <input type="number" id="real-consumption" placeholder="Ej: 300" required>
+
+                <h3>Consumo estimado por la app (kWh)</h3>
+                <div id="estimated-consumption" class="fake-input">280</div>
+
+                <button type="submit" class="button">Comparar Consumo</button>
+            </form>
+
+        </div>
+
+        <!-- Columna de Gráficas -->
+        <div class="chart-section">
+            <h2>Gráfica de Comparativa</h2>
+            <div class="chart-container2">
+                <canvas id="barChart1"></canvas>
+            </div>
+
+            <h2>Consumo Estimado</h2>
+            <div class="chart-container2">
+                <canvas id="barChart2"></canvas>
+            </div>
+
+            <!-- Referencia al archivo script.js -->
+            <script src="script-grafica.js"></script>
+        </div>
+
+        <!-- Apartado de Sugerencias o Posibles Causas -->
+        <div class="suggestions-section">
+            <h2>Sugerencias o Posibles Causas</h2>
+            <ul>
+                <li>Revisa el uso de electrodomésticos durante horas pico.</li>
+                <li>Asegúrate de que los electrodomésticos estén en modo eficiente.</li>
+                <li>Considera mejorar el aislamiento de tu hogar para reducir el consumo.</li>
+                <li>Realiza mantenimiento regular a tus equipos para asegurar su eficiencia.</li>
+                <li>Consulta con un experto sobre el consumo de energía de tu hogar.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

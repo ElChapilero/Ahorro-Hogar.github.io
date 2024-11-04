@@ -1,0 +1,336 @@
+:root {
+    --primary-color: #424242;
+    --secondary-color: #585858;
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #efefef;
+    --gray-2: #2b2828;
+
+    --facebook-color: #4267B2;
+    --google-color: #DB4437;
+    --twitter-color: #1DA1F2;
+    --insta-color: #E1306C;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+p {
+    font-family: 'Poppins', sans-serif;
+    /* Asegúrate de que los encabezados y párrafos también usen Poppins */
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 0 1rem;
+}
+
+.title-bar {
+    background-color: #555;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.main-content {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    /* Ajusta el ancho según tus necesidades */
+}
+
+.home-type-section,
+.selection-section,
+.advice-section,
+.recommendations-section,
+.config-notif {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    /* Espacio entre las secciones */
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+select {
+    width: 100%;
+    /* Mantener el ancho completo */
+    padding: 0.5rem;
+    /* Espaciado interno */
+    margin-bottom: 1rem;
+    /* Espacio entre elementos */
+    border: 1px solid #ccc;
+    /* Borde */
+    border-radius: 4px;
+    /* Esquinas redondeadas */
+    font-size: 1.2rem;
+    /* Aumentar el tamaño de la letra */
+}
+
+.button {
+    cursor: pointer;
+    width: 100%;
+    padding: 0.6rem 0;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--primary-color);
+    /* Asegúrate de definir este color en tu CSS */
+    color: var(--white);
+    /* Asegúrate de definir este color en tu CSS */
+    font-size: 1.2rem;
+    outline: none;
+    margin-bottom: 1rem;
+    /* Espacio entre los botones y los elementos de abajo */
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+}
+
+.advice-section {
+    width: 70%;
+    /* Ancho de la sección de recomendaciones */
+}
+
+.recommendations-section {
+    width: 50%;
+    /* Ancho de la sección de recomendaciones */
+}
+
+.config-notif {
+    width: 25%;
+    /* Ancho de la sección de recomendaciones */
+}
+
+/* configuracion para pantalla historial*/
+.main-content.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content .paper {
+    background-color: #fff;
+    width: 70%;
+    max-width: 800px;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    /* Alineación como una página de Word */
+    border-radius: 8px;
+    height: 80vh;
+    /* Limita la altura visible */
+    overflow-y: auto;
+    /* Activa el scroll vertical si el contenido es largo */
+}
+
+/*----------------------------------*/
+
+.comparison-section input[type="number"],
+.fake-input,
+.comparison-section {
+    width: 100%;
+    /* Mantén el ancho completo */
+    padding: 0.6rem;
+    /* Ajusta el padding para todos los elementos */
+    margin-bottom: 1rem;
+    /* Espacio entre los elementos */
+    border: 1px solid #ddd;
+    /* Borde común */
+    text-align: center;
+}
+
+.chart-container {
+    margin-top: 1.5rem;
+}
+
+.main-content.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Dos columnas */
+    grid-template-rows: auto auto;
+    /* Dos filas */
+    grid-template-areas:
+        "comparison chart"
+        "suggestions chart";
+    /* Aquí defines cómo se verán las áreas */
+    gap: 1.5rem;
+    /* Espaciado entre los elementos */
+    padding: 2rem;
+}
+
+.comparison-section {
+    grid-area: comparison;
+    /* Asigna esta sección al área de comparación */
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centrar verticalmente */
+    align-items: stretch;
+    /* Asegura que los elementos ocupen todo el ancho */
+    text-align: center;
+}
+
+.suggestions-section {
+    grid-area: suggestions;
+    /* Asigna esta sección al área de sugerencias */
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centrar verticalmente */
+    align-items: center;
+}
+
+.chart-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-area: chart;
+    /* Asigna esta sección al área de gráficas */
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/*table*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/*Grafica*/
+.chart-container2 {
+    width: 70%;
+    background-color: white;
+}
+
+/* Menú desplegable */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    min-width: 250px;
+    z-index: 1;
+}
+
+.dropdown-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--white);
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid var(--primary-color);
+    width: 100%; /* Ocupa todo el espacio disponible */
+}
+
+.dropdown-menu a:hover {
+    background-color: #f4f4f4;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+.perfil {
+    color: white;
+    text-decoration: none;
+    padding: 0 1rem;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Perfil de Hogar</title>
+</head>
+
+<body>
+    <!-- Primera Barra de Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Ahorro de Energía</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">Perfil de Hogar</a>
+                <a href="Recomendaciones.html" class="nav-item">Recomendaciones / Notificaciones</a>
+                <a href="historial.html" class="nav-item">Historial de Consumo</a>
+                <a href="Grafiacas.html" class="nav-item">Gráficas / Comparativas</a>
+                
+                <!-- Enlace de Perfil con menú desplegable -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="perfil" onclick="toggleProfileMenu(event)">Perfil</a>
+                    <div id="profileMenu" class="dropdown-menu">
+                        <div class="dropdown-title">Nombre Usuario</div>
+                        <a href="sign_in.html">Iniciar Sesión</a>
+                        <a href="register.html">Registrarse</a>
+                        <a href="#">Cerrar Sesión</a>
+                    </div>
+                </div>
+                <script src="menu-perfil.js"></script>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Segunda Barra con el Título de la Ventana -->
+    <div class="title-bar">
+        <h1>Perfil de Hogar</h1>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="main-content">
+        <div class="left-section">
+            <!-- Sección de Tipo de Hogar -->
+            <div class="home-type-section">
+                <h2>Tipo de Hogar</h2>
+                <select id="tipo-hogar">
+                    <option value="apartamento">Apartamento</option>
+                    <option value="casa">Casa</option>
+                    <option value="villa">Villa</option>
+                </select>
+                <button class="button" id="crear-perfil">Crear perfil de hogar</button>
+            </div>
+
+            <!-- Sección de Selección de Categoría de Electrodomésticos -->
+            <div class="selection-section">
+                <h2>Categoría de Electrodoméstico</h2>
+                <select id="categoria-electrodomestico">
+                    <option value="cocina">Cocina</option>
+                    <option value="lavado">Lavado</option>
+                    <option value="climatizacion">Climatización</option>
+                </select>
+
+                <h2>Electrodoméstico Específico</h2>
+                <select id="electrodomestico">
+                    <option value="nevera">Nevera</option>
+                    <option value="lavadora">Lavadora</option>
+                    <option value="aire-acondicionado">Aire Acondicionado</option>
+                </select>
+
+                <h2>Consumo Aproximado (Watts)</h2>
+                <select id="electrodomestico">
+                    <option value="nevera">300 - 567</option>
+                    <option value="lavadora">300 - 567</option>
+                    <option value="aire-acondicionado">300 - 567</option>
+                </select>
+                <button  class="button" id="crear-perfil">Agregar Electrodoméstico</button>
+                <button class="button" id="crear-perfil">Terminar Lista de Electrodoméstico</button>
+            </div>
+        </div>
+
+        <!-- Sección de Consejos Generales -->
+        <div class="advice-section">
+            <h2>Electrodomésticos</h2>
+            <!-- <p id="consejos">Aquí aparecerán la lista de los electrodomesticos.</p> -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Categoría</th>
+                        <th>Electrodoméstico</th>
+                        <th>Watts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cocina</td>
+                        <td>Microondas</td>
+                        <td>1200</td>
+                    </tr>
+                    <tr>
+                        <td>Lavandería</td>
+                        <td>Lavadora</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>Entretenimiento</td>
+                        <td>Televisión</td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <td>Cocina</td>
+                        <td>Microondas</td>
+                        <td>1200</td>
+                    </tr>
+                    <tr>
+                        <td>Lavandería</td>
+                        <td>Lavadora</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>Entretenimiento</td>
+                        <td>Televisión</td>
+                        <td>150</td>
+                    </tr><tr>
+                        <td>Cocina</td>
+                        <td>Microondas</td>
+                        <td>1200</td>
+                    </tr>
+                    <tr>
+                        <td>Lavandería</td>
+                        <td>Lavadora</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>Entretenimiento</td>
+                        <td>Televisión</td>
+                        <td>150</td>
+                    </tr><tr>
+                        <td>Cocina</td>
+                        <td>Microondas</td>
+                        <td>1200</td>
+                    </tr>
+                    <tr>
+                        <td>Lavandería</td>
+                        <td>Lavadora</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>Entretenimiento</td>
+                        <td>Televisión</td>
+                        <td>150</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

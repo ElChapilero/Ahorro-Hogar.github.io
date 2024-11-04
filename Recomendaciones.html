@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Recomendaciones / Notificaciones</title>
+</head>
+
+<body>
+    <!-- Primera Barra de Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Ahorro de Energía</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">Perfil de Hogar</a>
+                <a href="Recomendaciones.html" class="nav-item">Recomendaciones / Notificaciones</a>
+                <a href="historial.html" class="nav-item">Historial de Consumo</a>
+                <a href="Grafiacas.html" class="nav-item">Gráficas / Comparativas</a>
+                
+                <!-- Enlace de Perfil con menú desplegable -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="perfil" onclick="toggleProfileMenu(event)">Perfil</a>
+                    <div id="profileMenu" class="dropdown-menu">
+                        <div class="dropdown-title">Nombre Usuario</div>
+                        <a href="sign_in.html">Iniciar Sesión</a>
+                        <a href="register.html">Registrarse</a>
+                        <a href="#">Cerrar Sesión</a>
+                    </div>
+                </div>
+                <script src="menu-perfil.js"></script>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Segunda Barra con el Título de la Ventana -->
+    <div class="title-bar">
+        <h1>Recomendaciones / Notificaciones</h1>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="main-content">
+        <!-- Sección de Recomendaciones -->
+        <div class="recommendations-section">
+            <h2>Recomendaciones</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Recomendacion corta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hábitos</td>
+                        <td>Apaga luces y dispositivos</td>
+                    </tr>
+                    <tr>
+                        <td>Cambio de Electrodomésticos</td>
+                        <td>Usa bombillas LED</td>
+                    </tr>
+                    <tr>
+                        <td>Uso de Aparatos</td>
+                        <td>Ajusta la temperatura del aire</td>
+                    </tr>
+                    <tr>
+                        <td>Hábitos</td>
+                        <td>Apaga luces y dispositivos</td>
+                    </tr>
+                    <tr>
+                        <td>Cambio de Electrodomésticos</td>
+                        <td>Usa bombillas LED</td>
+                    </tr>
+                    <tr>
+                        <td>Uso de Aparatos</td>
+                        <td>Ajusta la temperatura del aire</td>
+                    </tr>
+                    <tr>
+                        <td>Hábitos</td>
+                        <td>Apaga luces y dispositivos</td>
+                    </tr>
+                    <tr>
+                        <td>Cambio de Electrodomésticos</td>
+                        <td>Usa bombillas LED</td>
+                    </tr>
+                    <tr>
+                        <td>Uso de Aparatos</td>
+                        <td>Ajusta la temperatura del aire</td>
+                    </tr>
+                    <tr>
+                        <td>Hábitos</td>
+                        <td>Apaga luces y dispositivos</td>
+                    </tr>
+                    <tr>
+                        <td>Cambio de Electrodomésticos</td>
+                        <td>Usa bombillas LED</td>
+                    </tr>
+                    <tr>
+                        <td>Uso de Aparatos</td>
+                        <td>Ajusta la temperatura del aire</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="config-notif">
+            <h2>Recomendaciones</h2>
+
+            <h2>Configuraciones</h2>
+
+            <h3>Recomendaciones externas</h3>
+            <select id="notificaciones-email">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <h3>Frecuencia de notificaciones</h3>
+            <select id="frecuencia-notificaciones">
+                <option value="diario">Diario</option>
+                <option value="semanal">Semanal</option>
+                <option value="mensual">Mensual</option>
+            </select>
+
+            <h3>Recomendaciones de habitos</h3>
+            <select id="frecuencia-notificaciones">
+                <option value="diario">Si</option>
+                <option value="semanal">No</option>
+            </select>
+
+            <h3>Recomendaciones avanzadas</h3>
+            <select id="frecuencia-notificaciones">
+                <option value="diario">Si</option>
+                <option value="semanal">No</option>
+            </select>
+
+            <h3>Recomendaciones</h3>
+            <select id="frecuencia-notificaciones">
+                <option value="diario">Diario</option>
+                <option value="semanal">Semanal</option>
+                <option value="mensual">Mensual</option>
+            </select>
+
+            <button type="button" class="button">Guardar Configuraciones</button>
+
+        </div>
+
+        <!-- Sección de Notificaciones y Configuraciones -->
+        <div class="config-notif">
+            <h2>Notificaciones</h2>
+
+            <h2>Configuraciones</h2>
+
+            <h3>Recibir notificaciones por correo electrónico</h3>
+            <select id="notificaciones-email">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <h3>Frecuencia de notificaciones</h3>
+            <select id="frecuencia-notificaciones">
+                <option value="diario">Diario</option>
+                <option value="semanal">Semanal</option>
+                <option value="mensual">Mensual</option>
+            </select>
+
+            <h3>Notificaciones de habitos</h3>
+            <select id="frecuencia-notificaciones">
+                <option value="diario">Si</option>
+                <option value="semanal">No</option>
+            </select>
+
+            <h3>Recibir notificaciones sobre mejoras en las recomendaciones</h3>
+            <select id="frecuencia-notificaciones">
+                <option value="diario">Si</option>
+                <option value="semanal">No</option>
+            </select>
+
+            <h3>Recibir notificaciones del Historial</h3>
+            <select id="frecuencia-notificaciones">
+                <option value="diario">Diario</option>
+                <option value="semanal">Semanal</option>
+                <option value="mensual">Mensual</option>
+            </select>
+
+            <button type="button" class="button">Guardar Configuraciones</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
