@@ -18,7 +18,7 @@
                 <a href="Recomendaciones.html" class="nav-item">Recomendaciones / Notificaciones</a>
                 <a href="historial.html" class="nav-item">Historial de Consumo</a>
                 <a href="Grafiacas.html" class="nav-item">Gráficas / Comparativas</a>
-                
+
                 <!-- Enlace de Perfil con menú desplegable -->
                 <div class="nav-item dropdown">
                     <a href="#" class="perfil" onclick="toggleProfileMenu(event)">Perfil</a>
@@ -40,44 +40,43 @@
     </div>
 
     <!-- Contenido Principal -->
-    <div class="main-content">
-        <div class="left-section">
-            <!-- Sección de Tipo de Hogar -->
-            <div class="home-type-section">
-                <h2>Tipo de Hogar</h2>
-                <select id="tipo-hogar">
-                    <option value="apartamento">Apartamento</option>
-                    <option value="casa">Casa</option>
-                    <option value="villa">Villa</option>
-                </select>
-                <button class="button" id="crear-perfil">Crear perfil de hogar</button>
-            </div>
+    <div class="main-content grid-index">
 
-            <!-- Sección de Selección de Categoría de Electrodomésticos -->
-            <div class="selection-section">
-                <h2>Categoría de Electrodoméstico</h2>
-                <select id="categoria-electrodomestico">
-                    <option value="cocina">Cocina</option>
-                    <option value="lavado">Lavado</option>
-                    <option value="climatizacion">Climatización</option>
-                </select>
+        <!-- Sección de Tipo de Hogar -->
+        <div class="home-type-section">
+            <h2>Tipo de Hogar</h2>
+            <select id="tipo-hogar">
+                <option value="apartamento">Apartamento</option>
+                <option value="casa">Casa</option>
+                <option value="villa">Villa</option>
+            </select>
+            <button class="button" id="crear-perfil">Crear perfil de hogar</button>
+        </div>
 
-                <h2>Electrodoméstico Específico</h2>
-                <select id="electrodomestico">
-                    <option value="nevera">Nevera</option>
-                    <option value="lavadora">Lavadora</option>
-                    <option value="aire-acondicionado">Aire Acondicionado</option>
-                </select>
+        <!-- Sección de Selección de Categoría de Electrodomésticos -->
+        <div class="selection-section">
+            <h2>Categoría de Electrodoméstico</h2>
+            <select id="categoria-electrodomestico">
+                <option value="cocina">Cocina</option>
+                <option value="lavado">Lavado</option>
+                <option value="climatizacion">Climatización</option>
+            </select>
 
-                <h2>Consumo Aproximado (Watts)</h2>
-                <select id="electrodomestico">
-                    <option value="nevera">300 - 567</option>
-                    <option value="lavadora">300 - 567</option>
-                    <option value="aire-acondicionado">300 - 567</option>
-                </select>
-                <button  class="button" id="crear-perfil">Agregar Electrodoméstico</button>
-                <button class="button" id="crear-perfil">Terminar Lista de Electrodoméstico</button>
-            </div>
+            <h2>Electrodoméstico Específico</h2>
+            <select id="electrodomestico">
+                <option value="nevera">Nevera</option>
+                <option value="lavadora">Lavadora</option>
+                <option value="aire-acondicionado">Aire Acondicionado</option>
+            </select>
+
+            <h2>Consumo Aproximado (Watts)</h2>
+            <select id="electrodomestico">
+                <option value="nevera">300 - 567</option>
+                <option value="lavadora">300 - 567</option>
+                <option value="aire-acondicionado">300 - 567</option>
+            </select>
+            <button class="button" id="crear-perfil">Agregar Electrodoméstico</button>
+            <button class="button" id="crear-perfil">Terminar Lista de Electrodoméstico</button>
         </div>
 
         <!-- Sección de Consejos Generales -->
@@ -122,7 +121,8 @@
                         <td>Entretenimiento</td>
                         <td>Televisión</td>
                         <td>150</td>
-                    </tr><tr>
+                    </tr>
+                    <tr>
                         <td>Cocina</td>
                         <td>Microondas</td>
                         <td>1200</td>
@@ -136,7 +136,8 @@
                         <td>Entretenimiento</td>
                         <td>Televisión</td>
                         <td>150</td>
-                    </tr><tr>
+                    </tr>
+                    <tr>
                         <td>Cocina</td>
                         <td>Microondas</td>
                         <td>1200</td>
