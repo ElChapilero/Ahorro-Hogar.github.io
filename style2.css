@@ -289,6 +289,10 @@ tr:nth-child(even) {
     background-color: var(--white);
 }
 
+canvas {
+    font-size: 2vw !important;
+}
+
 /* Menú desplegable */
 .dropdown {
     position: relative;
