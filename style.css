@@ -144,9 +144,17 @@ body {
 }
 
 /*ordena mas los textos p */
+p {
+    font-size: 1vw;
+}
+
+b,
+span {
+    font-size: 0.9vw;
+}
+
 .form p {
     margin: 1rem 0;
-    font-size: .7rem;
 }
 
 /* mueve la columna de logos de inicio*/
