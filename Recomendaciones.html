@@ -138,9 +138,11 @@
                 <option value="semanal">Semanal</option>
                 <option value="mensual">Mensual</option>
             </select>
-
-            <button type="button" class="button">Guardar Configuraciones</button>
-
+            <div id="notification" class="hidden">
+                <img id="notification-icon" src="logo_blanco.png" style="width: 30px; height: 30px; margin-right: 10px;">
+                <span id="notification-message">Mensaje de notificación</span>
+            </div>
+            <button onclick="showNotification('Configuraciones guardadas', 'logo_blanco.png')" class="button" id="crear-perfil">Guardar Configuraciones</button>
         </div>
 
         <!-- Sección de Notificaciones y Configuraciones -->
@@ -178,11 +180,14 @@
                 <option value="semanal">Semanal</option>
                 <option value="mensual">Mensual</option>
             </select>
-
-            <button type="button" class="button">Guardar Configuraciones</button>
+            <div id="notification" class="hidden">
+                <img id="notification-icon" src="logo_blanco.png" style="width: 30px; height: 30px; margin-right: 10px;">
+                <span id="notification-message">Mensaje de notificación</span>
+            </div>
+            <button onclick="showNotification('Configuraciones guardadas', 'logo_blanco.png')" class="button" id="crear-perfil">Guardar Configuraciones</button>
         </div>
     </div>
-
+    <script src="mensaje.js"></script>
     <script src="index.js"></script>
 </body>
 

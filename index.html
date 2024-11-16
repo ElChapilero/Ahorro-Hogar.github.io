@@ -50,7 +50,11 @@
                 <option value="casa">Casa</option>
                 <option value="villa">Villa</option>
             </select>
-            <button class="button" id="crear-perfil">Crear perfil de hogar</button>
+            <div id="notification" class="hidden">
+                <img id="notification-icon" src="logo_blanco.png" style="width: 30px; height: 30px; margin-right: 10px;">
+                <span id="notification-message">Mensaje de notificación</span>
+            </div>
+            <button onclick="showNotification('Perfil de hogar seleccionado', 'logo_blanco.png')" class="button" id="crear-perfil">Crear perfil de hogar</button>
         </div>
 
         <!-- Sección de Selección de Categoría de Electrodomésticos -->
@@ -75,8 +79,16 @@
                 <option value="lavadora">300 - 567</option>
                 <option value="aire-acondicionado">300 - 567</option>
             </select>
-            <button class="button" id="crear-perfil">Agregar Electrodoméstico</button>
-            <button class="button" id="crear-perfil">Terminar Lista de Electrodoméstico</button>
+            <div id="notification" class="hidden">
+                <img id="notification-icon" src="logo_blanco.png" style="width: 30px; height: 30px; margin-right: 10px;">
+                <span id="notification-message">Mensaje de notificación</span>
+            </div>
+            <button onclick="showNotification('Electrodomestico agregado', 'logo_blanco.png')" class="button" id="crear-perfil">Agregar Electrodoméstico</button>
+            <div id="notification" class="hidden">
+                <img id="notification-icon" src="logo_blanco.png" style="width: 30px; height: 30px; margin-right: 10px;">
+                <span id="notification-message">Mensaje de notificación</span>
+            </div>
+            <button onclick="showNotification('Lista terminada', 'logo_blanco.png')" class="button" id="crear-perfil">Terminar Lista de Electrodoméstico</button>
         </div>
 
         <!-- Sección de Consejos Generales -->
@@ -85,6 +97,7 @@
             <!-- <p id="consejos">Aquí aparecerán la lista de los electrodomesticos.</p> -->
             <table>
                 <thead>
+                    <caption>Tipo de Hogar (su seleccion)</caption>
                     <tr>
                         <th>Categoría</th>
                         <th>Electrodoméstico</th>
@@ -157,7 +170,7 @@
 
         </div>
     </div>
-
+    <script src="mensaje.js"></script>
     <script src="index.js"></script>
 </body>
 

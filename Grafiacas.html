@@ -19,7 +19,7 @@
                 <a href="Recomendaciones.html" class="nav-item">Recomendaciones / Notificaciones</a>
                 <a href="historial.html" class="nav-item">Historial de Consumo</a>
                 <a href="Grafiacas.html" class="nav-item">Gráficas / Comparativas</a>
-                
+
                 <!-- Enlace de Perfil con menú desplegable -->
                 <div class="nav-item dropdown">
                     <a href="#" class="perfil" onclick="toggleProfileMenu(event)">Perfil</a>
@@ -46,16 +46,17 @@
         <div class="comparison-section">
             <h2>Comparar Consumo</h2>
 
-            <form id="comparison-form">
-                <h2>Consumo real (kWh) del recibo de luz</h2>
-                <div id="estimated-consumption" class="fake-input">---</div>
+            <h2>Consumo real (kWh) del recibo de luz</h2>
+            <div id="estimated-consumption" class="fake-input">---</div>
 
-                <h2>Consumo estimado por la app (kWh)</h2>
-                <div id="estimated-consumption" class="fake-input">280</div>
+            <h2>Consumo estimado por la app (kWh)</h2>
+            <div id="estimated-consumption" class="fake-input">280</div>
 
-                <button type="submit" class="button">Comparar Consumo</button>
-            </form>
-
+            <div id="notification" class="hidden">
+                <img id="notification-icon" src="logo_blanco.png" style="width: 30px; height: 30px; margin-right: 10px;">
+                <span id="notification-message">Mensaje de notificación</span>
+            </div>
+            <button onclick="showNotification('Comparativas', 'logo_blanco.png')" class="button" id="crear-perfil">Comparar Consumo</button>
         </div>
 
         <!-- Columna de Gráficas -->
@@ -86,6 +87,7 @@
             </ul>
         </div>
     </div>
+    <script src="mensaje.js"></script>
 </body>
 
 </html>

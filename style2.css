@@ -267,6 +267,11 @@ table {
     border-collapse: collapse;
 }
 
+caption {
+    font-weight: bold;
+}
+
+caption,
 th,
 td {
     padding: 12px;
@@ -274,7 +279,8 @@ td {
     text-align: center;
 }
 
-th {
+th,
+caption {
     background-color: var(--primary-color);
     color: white;
 }
@@ -344,4 +350,30 @@ canvas {
     color: white;
     text-decoration: none;
     padding: 0 1vw;
+}
+
+
+/* MENSAJE DE PANTALLA */
+
+#notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+    display: flex; /* Alinea el contenido dentro del letrero */
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#notification.hidden {
+    opacity: 0;
+    visibility: hidden;
 }

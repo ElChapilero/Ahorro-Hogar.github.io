@@ -11,6 +11,12 @@
 
 <body>
     <div id="container" class="container">
+		
+		<div id="notification" class="hidden">
+			<img id="notification-icon" src="logo_blanco.png" style="width: 30px; height: 30px; margin-right: 10px;">
+			<span id="notification-message">Mensaje de notificación</span>
+		</div>
+
 		<!-- CONTENT SECTION -->
 		<div class="row content-row">
 			<!-- SIGN IN CONTENT -->
@@ -21,7 +27,7 @@
 						Somos tu aliado para un hogar eficiente y sostenible. Aquí encontrarás consejos prácticos y herramientas para optimizar el consumo de energía en cada rincón de tu hogar. Aprende a reducir gastos y hacer un uso más consciente de tus electrodomésticos y dispositivos eléctricos. Con nosotros, ahorrar energía es fácil y accesible para todos. ¡Empieza hoy a construir un futuro más verde y responsable!
 					</p>
 					<div class="img animar">
-						<img src="logo_web.png" alt="welcome">
+						<img src="logo_blanco.png" alt="welcome">
 					</div>
 				</div>
 			</div>
@@ -37,7 +43,8 @@
 							<i class='bx bxs-lock-alt'></i>
 							<input type="password" placeholder="Password">
 						</div>
-						<button class="btn-redirect" data-url="index.html">Iniciar sesión</button>
+
+						<button onclick="showNotification('Inicio de sesion exitoso', 'logo_blanco.png')"class="btn-redirect" data-url="index.html">Iniciar sesión</button>
 						<p>
 							<b>Has olvidado tu contraseña?</b>
 						</p>
@@ -69,7 +76,7 @@
 		</div>
 		<!-- END CONTENT SECTION -->
 	</div>
-
+	<script src="mensaje.js"></script>
     <script src="script.js"></script>
 	<script src="botones.js"></script>
 </body>

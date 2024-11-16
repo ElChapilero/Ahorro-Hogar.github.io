@@ -1,8 +1,11 @@
 document.querySelectorAll('.btn-redirect').forEach(function(button) {
     button.addEventListener('click', function() {
-        // Obtiene la URL del atributo 'data-url' y redirige
+        // Obtiene la URL del atributo 'data-url'
         const url = this.getAttribute('data-url');
-        window.location.href = url;
+
+        setTimeout(function() {
+            window.location.href = url;
+        }, 2000);
     });
 });
 
