@@ -235,7 +235,6 @@ select {
 
 .comparison-section {
     grid-area: comparison;
-    align-items: stretch;
     text-align: center;
 }
 
