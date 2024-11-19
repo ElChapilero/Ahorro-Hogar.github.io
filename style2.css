@@ -33,6 +33,11 @@ p {
 h2, h3 {
     margin-bottom: 1vw;
 }
+
+h3 {
+    color: var(--primary-color);
+    font-size: .9vw;
+}
 /* FIN TEXTO */
 
 html,
@@ -103,7 +108,7 @@ body {
 
 .main-content.grid-index {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 30% 69%;
     /* Dos columnas */
     grid-template-rows: 25vh 58vh;
     /* Dos filas */
@@ -375,4 +380,90 @@ canvas {
 #notification.hidden {
     opacity: 0;
     visibility: hidden;
+}
+
+.home {
+    height: 85vh;
+}
+
+.home {
+    display: grid;
+    grid-template-columns: 49% 50%;
+    /* Dos filas */
+    grid-template-areas:
+        "section-principal section-principal"
+        "section-perfil section-recomendaciones"
+        "section-historial section-graficas";
+}
+
+.section-principal,
+.section-perfil, .section-recomendaciones,
+.section-historial, .section-graficas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white);
+    padding: 2vw;
+    border: 1px solid #ddd;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 8px;
+}
+
+.section-principal {
+    grid-area: section-principal;
+}
+
+.section-perfil {
+    grid-area: section-perfil;
+}
+
+.section-recomendaciones {
+    grid-area: section-recomendaciones;
+}
+
+.section-historial {
+    grid-area: section-historial;
+}
+
+.section-graficas {
+    grid-area: section-graficas;
+}
+
+.main-content.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content .home {
+    background-color: var(--white);
+    width: 85%;
+    max-width: 85vw;
+    text-align: left;
+    /* Alineación como una página de Word */
+    border-radius: 8px;
+    gap: 1vw;
+}
+
+
+.section-principal, .section-recomendaciones, .section-historial, .section-graficas, .section-perfil {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Dos columnas, la imagen ocupa 1 fracción y el texto 2 fracciones */
+    gap: 20px; /* Espacio entre la imagen y el texto */
+    align-items: center; /* Alinea los elementos al principio */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+}
+
+.image-container img {
+    height: 15vh; /* Mantiene la proporción de la imagen */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column; /* Alinea el texto verticalmente */
+    justify-content: flex-start;
 }

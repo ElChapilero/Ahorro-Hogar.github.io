@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
-    <title>Perfil de Hogar</title>
+    <title>Ahorro de Energía</title>
     <link rel="icon" href="logo_blanco.png" type="image/x-icon">
 </head>
 
@@ -13,9 +13,9 @@
     <!-- Primera Barra de Navegación -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">Ahorro de Energía</a>
+            <a href="home.html" class="nav-logo">Ahorro de Energía</a>
             <div class="nav-links">
-                <a href="index.html" class="nav-item">Perfil de Hogar</a>
+                <a href="perfil.html" class="nav-item">Perfil de Hogar</a>
                 <a href="Recomendaciones.html" class="nav-item">Recomendaciones / Notificaciones</a>
                 <a href="historial.html" class="nav-item">Historial de Consumo</a>
                 <a href="Grafiacas.html" class="nav-item">Gráficas / Comparativas</a>
@@ -37,140 +37,72 @@
 
     <!-- Segunda Barra con el Título de la Ventana -->
     <div class="title-bar">
-        <h1>Perfil de Hogar</h1>
+        <h1>Ahorro de Energía</h1>
     </div>
 
-    <!-- Contenido Principal -->
-    <div class="main-content grid-index">
+    <div class="main-content centered">
 
-        <!-- Sección de Tipo de Hogar -->
-        <div class="home-type-section">
-            <h2>Tipo de Hogar</h2>
-            <select id="tipo-hogar">
-                <option value="apartamento">Apartamento</option>
-                <option value="casa">Casa</option>
-                <option value="villa">Villa</option>
-            </select>
-            <div id="notification" class="hidden">
-                <img id="notification-icon" src="logo_blanco.png" style="width: 30px; height: 30px; margin-right: 10px;">
-                <span id="notification-message">Mensaje de notificación</span>
+        <!-- Contenido Principal -->
+        <div class="home">
+
+            <!-- Sección principal -->
+            <div class="section-principal">
+                <div class="image-container">
+                    <img src="logo_web.png" alt="Logo">
+                </div>
+                <div class="text-container">
+                    <h2>Ahorro de Energia</h2>
+                    <h3>Nos alegra que hayas llegado hasta aquí. Esta aplicación ha sido diseñada para ayudarte a reducir el consumo de energía en tu hogar de una manera sencilla y efectiva. Con nuestras recomendaciones personalizadas, podrás optimizar el uso de tus electrodomésticos, conocer hábitos más sostenibles y hacer un seguimiento de tu consumo energético.</h3>
+                </div>
+            </div>          
+
+            <!-- Sección perfil-->
+            <div class="section-perfil">
+                <div class="image-container">
+                    <img src="perfil.png" alt="Logo">
+                </div>
+                <div class="text-container">
+                    <h2>Perfil de Hogar: </h2>
+                    <h3>En esta sección, el usuario puede ingresar y ajustar los detalles de su hogar, como el tipo y número de electrodomésticos que posee. Esto permite personalizar las recomendaciones de ahorro y obtener estadísticas más precisas basadas en su consumo específico.</h3>
+                </div>
             </div>
-            <button onclick="showNotification('Perfil de hogar seleccionado', 'logo_blanco.png')" class="button" id="crear-perfil">Crear perfil de hogar</button>
+
+            <!-- Sección recomendaciones-->
+            <div class="section-recomendaciones">
+                <div class="image-container">
+                    <img src="recomendacion.png" alt="Logo">
+                </div>
+                <div class="text-container">
+                    <h2>Recomendaciones / Notificaciones</h2>
+                    <h3>Aquí se mostrarán sugerencias para optimizar el uso de la energía en el hogar, desde cambiar horarios de uso hasta implementar hábitos más eficientes. Además, las notificaciones alertan sobre momentos de alto consumo o recordatorios para mejorar la eficiencia.</h3>
+                </div>
+            </div>
+
+            <!-- Sección historial-->
+            <div class="section-historial">
+                <div class="image-container">
+                    <img src="historial.png" alt="Logo">
+                </div>
+                <div class="text-container">
+                    <h2>Historial de Consumo</h2>
+                    <h3>Esta sección permite al usuario visualizar el consumo energético pasado, identificando tendencias y patrones. De esta forma, pueden evaluar el impacto de sus esfuerzos de ahorro y ajustar sus hábitos según sea necesario.</h3>
+                </div>
+            </div>
+
+            <!-- Sección grafica-->
+            <div class="section-graficas">
+                <div class="image-container">
+                    <img src="graficas.png" alt="Logo">
+                </div>
+                <div class="text-container">
+                    <h2>Gráficas / Comparativas</h2>
+                    <h3>Proporciona representaciones visuales de los datos de consumo, facilitando la comparación entre diferentes periodos o con usuarios de perfiles similares. Esto ayuda a entender mejor cómo y dónde se consume más energía y motiva a realizar mejoras.</h3>
+                </div>
+            </div>
         </div>
 
-        <!-- Sección de Selección de Categoría de Electrodomésticos -->
-        <div class="selection-section">
-            <h2>Categoría de Electrodoméstico</h2>
-            <select id="categoria-electrodomestico">
-                <option value="cocina">Cocina</option>
-                <option value="lavado">Lavado</option>
-                <option value="climatizacion">Climatización</option>
-            </select>
-
-            <h2>Electrodoméstico Específico</h2>
-            <select id="electrodomestico">
-                <option value="nevera">Nevera</option>
-                <option value="lavadora">Lavadora</option>
-                <option value="aire-acondicionado">Aire Acondicionado</option>
-            </select>
-
-            <h2>Consumo Aproximado (Watts)</h2>
-            <select id="electrodomestico">
-                <option value="nevera">300 - 567</option>
-                <option value="lavadora">300 - 567</option>
-                <option value="aire-acondicionado">300 - 567</option>
-            </select>
-            <div id="notification" class="hidden">
-                <img id="notification-icon" src="logo_blanco.png" style="width: 30px; height: 30px; margin-right: 10px;">
-                <span id="notification-message">Mensaje de notificación</span>
-            </div>
-            <button onclick="showNotification('Electrodomestico agregado', 'logo_blanco.png')" class="button" id="crear-perfil">Agregar Electrodoméstico</button>
-            <div id="notification" class="hidden">
-                <img id="notification-icon" src="logo_blanco.png" style="width: 30px; height: 30px; margin-right: 10px;">
-                <span id="notification-message">Mensaje de notificación</span>
-            </div>
-            <button onclick="showNotification('Lista terminada', 'logo_blanco.png')" class="button" id="crear-perfil">Terminar Lista de Electrodoméstico</button>
-        </div>
-
-        <!-- Sección de Consejos Generales -->
-        <div class="advice-section">
-            <h2>Electrodomésticos</h2>
-            <!-- <p id="consejos">Aquí aparecerán la lista de los electrodomesticos.</p> -->
-            <table>
-                <thead>
-                    <caption>Tipo de Hogar (su seleccion)</caption>
-                    <tr>
-                        <th>Categoría</th>
-                        <th>Electrodoméstico</th>
-                        <th>Watts</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Cocina</td>
-                        <td>Microondas</td>
-                        <td>1200</td>
-                    </tr>
-                    <tr>
-                        <td>Lavandería</td>
-                        <td>Lavadora</td>
-                        <td>500</td>
-                    </tr>
-                    <tr>
-                        <td>Entretenimiento</td>
-                        <td>Televisión</td>
-                        <td>150</td>
-                    </tr>
-                    <tr>
-                        <td>Cocina</td>
-                        <td>Microondas</td>
-                        <td>1200</td>
-                    </tr>
-                    <tr>
-                        <td>Lavandería</td>
-                        <td>Lavadora</td>
-                        <td>500</td>
-                    </tr>
-                    <tr>
-                        <td>Entretenimiento</td>
-                        <td>Televisión</td>
-                        <td>150</td>
-                    </tr>
-                    <tr>
-                        <td>Cocina</td>
-                        <td>Microondas</td>
-                        <td>1200</td>
-                    </tr>
-                    <tr>
-                        <td>Lavandería</td>
-                        <td>Lavadora</td>
-                        <td>500</td>
-                    </tr>
-                    <tr>
-                        <td>Entretenimiento</td>
-                        <td>Televisión</td>
-                        <td>150</td>
-                    </tr>
-                    <tr>
-                        <td>Cocina</td>
-                        <td>Microondas</td>
-                        <td>1200</td>
-                    </tr>
-                    <tr>
-                        <td>Lavandería</td>
-                        <td>Lavadora</td>
-                        <td>500</td>
-                    </tr>
-                    <tr>
-                        <td>Entretenimiento</td>
-                        <td>Televisión</td>
-                        <td>150</td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </div>
     </div>
+
     <script src="mensaje.js"></script>
     <script src="index.js"></script>
 </body>
